@@ -66,11 +66,10 @@ void setup() {
 
 void loop() {  
 
-
-  if (tiempo_actual - tiempo_inicio > delayMS){
+             if (tiempo_actual - tiempo_inicio > delayMS){
 lecturaDTH();
-    tiempo_inicio = tiempo_actual;
-}
+                tiempo_inicio = tiempo_actual;
+             }
 
 lecturaBotones();
 logica();
@@ -94,8 +93,7 @@ void lecturaDTH(){//......................Lectura DTH
 
 
 
-
-void lecturaBotones(){
+void lecturaBotones(){//......................Lectura Botones
   edoManual=digitalRead(BManual);
   edoAltDem=digitalRead(BAltDem);
   edoSobCar=digitalRead(BSobCar);
@@ -103,8 +101,7 @@ void lecturaBotones(){
 
 
 
-void logica(){  
-
+void logica(){  //.....................................Logica
 
 /***************  Caso 1 *******************************/
     if(edoManual){
